@@ -12,25 +12,25 @@ export default function LoginPage() {
         {/* Formulário de Cadastro */}
         <div className={`absolute top-0 h-full transition-all duration-700 ease-in-out left-0 w-1/2 opacity-0 z-[1] ${isSignUp ? 'translate-x-full opacity-100 z-[5] animate-move' : ''}`}>
           <form className="bg-slate-900 flex items-center justify-center flex-col px-10 h-full">
-            <h1 className="text-white text-3xl font-bold mb-4">Criar Conta</h1>
-            <span className="text-slate-400 text-xs mb-4 uppercase tracking-wider">Use seu email</span>
+            <h1 className="text-white text-3xl font-bold mb-4">Create Account</h1>
+            <span className="text-slate-400 text-xs mb-4 uppercase tracking-wider">Use your email to create an account</span>
             
             {/* Input Nome */}
             <div className="flex items-center bg-slate-800/50 w-full mb-3 p-3.5 rounded-xl border border-slate-700/50 focus-within:border-blue-500/50 transition-all">
               <svg className="w-5 h-5 mr-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
-              <input type="text" placeholder="Nome" className="bg-transparent outline-none w-full text-sm placeholder:text-slate-600 text-slate-300" />
+              <input type="text" id= "signUpName" placeholder="Name" className="bg-transparent outline-none w-full text-sm placeholder:text-slate-600 text-slate-300" required/>
             </div>
 
             {/* Input Email */}
             <div className="flex items-center bg-slate-800/50 w-full mb-3 p-3.5 rounded-xl border border-slate-700/50 focus-within:border-blue-500/50 transition-all">
               <svg className="w-5 h-5 mr-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-              <input type="email" placeholder="Email" className="bg-transparent outline-none w-full text-sm placeholder:text-slate-600 text-slate-300" />
+              <input type="email" id= "signUpEmail" placeholder="Email" className="bg-transparent outline-none w-full text-sm placeholder:text-slate-600 text-slate-300" required/>
             </div>
 
             {/* Input Senha */}
             <div className="flex items-center bg-slate-800/50 w-full mb-3 p-3.5 rounded-xl border border-slate-700/50 focus-within:border-blue-500/50 transition-all">
               <svg className="w-5 h-5 mr-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-              <input type="password" placeholder="Senha" className="bg-transparent outline-none w-full text-sm placeholder:text-slate-600 text-slate-300" />
+              <input type="password" id = "signUpPassword" placeholder="Senha" className="bg-transparent outline-none w-full text-sm placeholder:text-slate-600 text-slate-300" required />
             </div>
 
             <button className="mt-4 bg-blue-600 text-white text-xs py-3 px-11 rounded-lg font-bold uppercase tracking-widest hover:bg-blue-700 transition-all">
