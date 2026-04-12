@@ -1,6 +1,6 @@
 'use client'
 import { useCallback, useEffect, useState } from 'react'
-import { createClient } from '@/utils/supabase/client' // Importação ajustada para o seu projeto [cite: 114]
+import { createClient } from '@/utils/supabase/client' 
 import { type User } from '@supabase/supabase-js'
 
 export default function AccountForm({ user }: { user: User | null }) {
@@ -10,7 +10,7 @@ export default function AccountForm({ user }: { user: User | null }) {
   const [username, setUsername] = useState<string | null>(null)
   const [website, setWebsite] = useState<string | null>(null)
 
-  // Busca os dados do perfil na tabela 'profiles' [cite: 144]
+  
   const getProfile = useCallback(async () => {
     try {
       setLoading(true)
@@ -41,7 +41,7 @@ export default function AccountForm({ user }: { user: User | null }) {
     getProfile()
   }, [user, getProfile])
 
-  // Atualiza as informações do investidor [cite: 144]
+  
   async function updateProfile({
     username,
     website,
